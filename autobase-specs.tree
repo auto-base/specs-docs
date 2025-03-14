@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="autobase-specs"
+                 name="Autobase Specs"
+                 start-page="local-setup.md">
+    <toc-element topic="local-setup.md"/>
+    <toc-element topic="public-api.md"/>
+    <toc-element topic="windows-env.md"/>
+    <toc-element topic="unix-env.md"/>
+</instance-profile>
