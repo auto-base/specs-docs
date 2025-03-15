@@ -91,12 +91,33 @@
 <tabs>
     <tab title="%windows%">
         <p>Для локального запуска на ОС %windows%</p>
+        <p>Вам также понадобится дополнительно ПО в виде make, установить её на компьютер с ОС %windows% можно с помощью CYGWIN.</p>
         <code-block lang="powershell">
             make run-swagger
         </code-block>
     </tab>
-    <tab title="%unix%">
-        <p>Для локального запуска на ОС %unix%</p>
+    <tab title="Linux">
+        <p>Для локального запуска на ОС Linux</p>
+        <p>Установите make, используя команду:</p>
+        <code-block lang="bash">
+            apt install make
+        </code-block>
+        После чего - выполните эту команду 
+        <code-block lang="bash">
+            make run-swagger
+        </code-block>
+    </tab>
+    <tab title="MacOS">
+        <p>Для локального запуска на macOS</p>
+        <p>Убедитесь, что у вас установлен Homebrew. Если его нет, вы можете установить его, выполнив следующую команду в терминале:</p>
+        <code-block lang="bash">
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        </code-block>
+        <p>После установки Homebrew, установите make:</p>
+        <code-block lang="bash">
+            brew install make
+        </code-block>
+        <p>Теперь вы можете запустить проект:</p>
         <code-block lang="bash">
             make run-swagger
         </code-block>
