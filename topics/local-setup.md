@@ -91,7 +91,8 @@
 <tabs>
     <tab title="%windows%">
         <p>Для локального запуска на ОС %windows%</p>
-        <p>Вам также понадобится дополнительно ПО в виде make, установить её на компьютер с ОС %windows% можно с помощью CYGWIN.</p>
+        <p>Вам также понадобится дополнительно ПО в виде make, установить её на компьютер с ОС %windows% можно с помощью <a href="https://www.cygwin.com/install.html">CYGWIN</a>.</p>
+        <p>После чего вы сможете запустить публичную спецификацию внешнего API следующей командой:</p>        
         <code-block lang="powershell">
             make run-swagger
         </code-block>
