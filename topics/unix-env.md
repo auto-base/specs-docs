@@ -8,7 +8,7 @@
                 Открыть терминал с помощью сочетания клавиш <shortcut>CTRL+T</shortcut>
             </tab>
             <tab title="MacOS">
-                Открыть терминал с помощью сочетания клавиш <shortcut>CTRL+T</shortcut>
+                Открыть терминал с помощью сочетания клавиш <shortcut>COMMAND+T </shortcut>
             </tab>
         </tabs>
     </step>
@@ -22,7 +22,7 @@
                 </code-block>
             </tab>
             <tab title="MacOS">
-               вести в терминал команду:
+               Ввести в терминал команду:
                 <code-block>
                     nano ~/.zprofile
                 </code-block>
