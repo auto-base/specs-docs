@@ -5,4 +5,5 @@
     <var name="title" value="Autobase Specs"/>
     <var name="windows" value="Windows"/>
     <var name="unix" value="Linux/MacOS"/>
+    <var name="SWAGGER_PORT" value="%SWAGGER_PORT%"/>
 </vars>
