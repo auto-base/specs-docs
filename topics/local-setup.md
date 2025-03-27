@@ -1,7 +1,9 @@
 # Локальный запуск спецификации внешнего API проекта %product%
 
+В данной статье рассматривается локальный запуск спецификации публичного API проекта %product%.
+
 <tip>
-    Вы также можете попробовать запуск из <a href="public-api.md">документации</a> 
+    Возможно вы искали запуск из <a href="public-api.md">документации</a>.
 </tip>
 
 ## Начало работы
@@ -38,89 +40,72 @@
 </step>
 </procedure>
 
-## Установка Docker
-
-Для локального запуска и отладки публичной спецификации API %product% вам может понадобиться Docker
-
-<procedure>
-    <step>Зайдите на <a href="https://docs.docker.com/get-started/get-docker/">официальный сайт docker</a> и установите последнюю версию для вашей ОС</step>
-</procedure>
-
-## Настройка переменных среды
-
-Для локального запуска и отладки публичной спецификации API %product% вам также необходимо настроить переменные среды,
-для этого:
-
-<procedure title="Установка переменных среды" id="env_setup">
-    <step>
-        Перечень всех переменных сред используемых во внешней спецификации проекта %product%
-        <table>
-            <tr>
-                <td>Переменная</td>
-                <td>Значение</td>
-            </tr>
-            <tr>
-                <td>SWAGGER_PORT</td>
-                <td>Порт для swagger ui по умолчанию - 9096</td>
-            </tr>
-        </table>
-    </step>
-    <step>
-        Установка обязательных параметров
+## Локальный запуск спецификации
+<tabs>
+   <tab title="Браузер">
+        Для запуска в браузере вам необходимо открыть репозиторий, открыть файл pages/index.html в браузере.
+    </tab>
+   <tab title="Докер-контейнер">
         <tabs>
             <tab title="%windows%">
-                <tip>Для установки переменных среды перманентно можете изучить данную <a href="windows-env.md">статью</a>, либо изучить <a href="https://superuser.com/a/1529193">данное обсуждение</a></tip>
-                <p>Для установки переменных среды на ОС %windows%</p>
+                <p>Для локального запуска на ОС %windows%</p>
+                <p>Вам также понадобится дополнительно ПО в виде make, установить её на компьютер с ОС %windows% можно с помощью <a href="https://www.cygwin.com/install.html">CYGWIN</a>.</p>
+                <p>После чего вы сможете запустить публичную спецификацию внешнего API следующей командой:</p>        
                 <code-block lang="powershell">
-                    set "SWAGGER_PORT=9096"
+                    make run-swagger
                 </code-block>
             </tab>
-            <tab title="%unix%">
-                <tip>Для установки переменных среды перманентно можете изучить данную <a href="unix-env.md">статью</a></tip>
-                <p>Для установки переменных среды на ОС %unix%</p>
+            <tab title="Linux">
+                <p>Для локального запуска на ОС Linux</p>
+                <p>Установите make, используя команду:</p>
                 <code-block lang="bash">
-                    export SWAGGER_PORT=9096
+                    apt install make
+                </code-block>
+                После чего - выполните эту команду 
+                <code-block lang="bash">
+                    make run-swagger
+                </code-block>
+            </tab>
+            <tab title="MacOS">
+                <p>Для локального запуска на macOS</p>
+                <p>Убедитесь, что у вас установлен Homebrew. Если его нет, вы можете установить его, выполнив следующую команду в терминале:</p>
+                <code-block lang="bash">
+                    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+                </code-block>
+                <p>После установки Homebrew, установите make:</p>
+                <code-block lang="bash">
+                    brew install make
+                </code-block>
+                <p>Теперь вы можете запустить проект:</p>
+                <code-block lang="bash">
+                    make run-swagger
                 </code-block>
             </tab>
         </tabs>
-    </step>
-</procedure>
-
-## Локальный запуск спецификации
-
-<tabs>
-    <tab title="%windows%">
-        <p>Для локального запуска на ОС %windows%</p>
-        <p>Вам также понадобится дополнительно ПО в виде make, установить её на компьютер с ОС %windows% можно с помощью <a href="https://www.cygwin.com/install.html">CYGWIN</a>.</p>
-        <p>После чего вы сможете запустить публичную спецификацию внешнего API следующей командой:</p>        
-        <code-block lang="powershell">
-            make run-swagger
-        </code-block>
-    </tab>
-    <tab title="Linux">
-        <p>Для локального запуска на ОС Linux</p>
-        <p>Установите make, используя команду:</p>
-        <code-block lang="bash">
-            apt install make
-        </code-block>
-        После чего - выполните эту команду 
-        <code-block lang="bash">
-            make run-swagger
-        </code-block>
-    </tab>
-    <tab title="MacOS">
-        <p>Для локального запуска на macOS</p>
-        <p>Убедитесь, что у вас установлен Homebrew. Если его нет, вы можете установить его, выполнив следующую команду в терминале:</p>
-        <code-block lang="bash">
-            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        </code-block>
-        <p>После установки Homebrew, установите make:</p>
-        <code-block lang="bash">
-            brew install make
-        </code-block>
-        <p>Теперь вы можете запустить проект:</p>
-        <code-block lang="bash">
-            make run-swagger
-        </code-block>
     </tab>
 </tabs>
+<img src="swagger-ui-result.png" alt="Результат открытия документации" width="700"/>
+
+## Авторизация
+
+<procedure title="Для авторизации в публичном API проекта %product% необходимо:" id="для_авторизации_в_публичном_api_проекта_product_необходимо_">
+<step>
+    Нажать на зеленую кнопу Authorize
+    <img src="authorize-swagger-ui-button.png" alt="Зеленая кнопка авторизации в swagger-ui"/>
+</step>
+<step>
+    Ввести свои данные в форму basicAuth (http, Basic)
+    <img src="authorize-swagger-ui-basic-auth-form.png" alt=""/>
+</step>
+<step>
+    Нажать на зеленую кнопу Authorize
+    <img src="authorize-swagger-ui-button-result.png" alt="Зеленая кнопка авторизации в swagger-ui"/>
+</step>
+
+После данных манипуляций вы сможете проводить запросы к публичному API проекта %product%.
+Авторизация в публичном API проекта %product% обеспечивается через метод basic, суть которого заключается в подстановке пары значений логин:пароль.
+</procedure>
+
+<tip>
+    Вы также можете попробовать запуск из <a href="public-api.md">документации</a>.
+</tip>
