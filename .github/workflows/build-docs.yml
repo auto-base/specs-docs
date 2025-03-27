@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          lfs: 'true'
 
       - name: Define instance id and artifacts
         id: define-ids
@@ -46,11 +47,6 @@ jobs:
           echo "ALGOLIA_ARTIFACT=$ALGOLIA_ARTIFACT" >> $GITHUB_ENV
           echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT
           echo "algolia_artifact=$ALGOLIA_ARTIFACT" >> $GITHUB_OUTPUT
-
-      - name: Pull GitLfs images
-        with:
-          lfs: 'true'
-        run: git lfs pull
 
       - name: Build docs using Writerside Docker builder
         uses: JetBrains/writerside-github-action@v4
