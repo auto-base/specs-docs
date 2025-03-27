@@ -16,23 +16,23 @@
 <step>
     <p>Скачайте репозиторий</p>
     <tabs>
-        <tab title="Графический интерфейс">
-            <procedure id="клонирование_репозитория_графический_интерфейс">
-                <step>
-                    <p>Нажмите на зеленую кнопку Code</p>
-                    <img src="initial-clone-procedure-button.png" alt="Зеленая кнопка code" border-effect="line"/>  
-                </step>
-                <step>
-                    <p>В открывшемся окне нажмите на кнопку Download ZIP</p>
-                    <img src="initial-clone-procedure-modal-view.png" alt="Окно загрузки" border-effect="line"/>  
-                </step>
-            </procedure>
-        </tab>
         <tab title="Интерфейс командной строки">
             <p>Откройте терминал в нужной вам папке и введите туда эту команду:</p>
             <code-block lang="console">
                 git clone https://github.com/auto-base/specs.git
             </code-block>
+        </tab>
+        <tab title="Графический интерфейс">
+            <procedure id="клонирование_репозитория_графический_интерфейс">
+                <step>
+                    <p>Нажмите на зеленую кнопку Code</p>
+                    <img src="$WRS_MODULE$/images/initial-clone-procedure-button.png" alt="Зеленая кнопка code" border-effect="line"/>  
+                </step>
+                <step>
+                    <p>В открывшемся окне нажмите на кнопку Download ZIP</p>
+                    <img src="$WRS_MODULE$/images/initial-clone-procedure-modal-view.png" alt="Окно загрузки" border-effect="line"/>  
+                </step>
+            </procedure>
         </tab>
     </tabs>
 </step>
