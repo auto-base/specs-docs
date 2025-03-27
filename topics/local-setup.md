@@ -26,11 +26,11 @@
             <procedure id="клонирование_репозитория_графический_интерфейс">
                 <step>
                     <p>Нажмите на зеленую кнопку Code</p>
-                    <img src="$WRS_MODULE$/images/initial-clone-procedure-button.png" alt="Зеленая кнопка code" border-effect="line"/>  
+                    <img src="initial-clone-procedure-button.png" alt="Зеленая кнопка code" border-effect="line"/>  
                 </step>
                 <step>
                     <p>В открывшемся окне нажмите на кнопку Download ZIP</p>
-                    <img src="$WRS_MODULE$/images/initial-clone-procedure-modal-view.png" alt="Окно загрузки" border-effect="line"/>  
+                    <img src="initial-clone-procedure-modal-view.png" alt="Окно загрузки" border-effect="line"/>  
                 </step>
             </procedure>
         </tab>
