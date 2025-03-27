@@ -1,7 +1,9 @@
 # Локальный запуск спецификации внешнего API проекта %product%
 
+В данной статье рассматривается локальный запуск спецификации публичного API проекта %product%.
+
 <tip>
-    Вы также можете попробовать запуск из <a href="public-api.md">документации</a> 
+    Вы также можете попробовать запуск из <a href="public-api.md">документации</a>.
 </tip>
 
 ## Начало работы
@@ -38,57 +40,14 @@
 </step>
 </procedure>
 
-## Установка Docker
-
-Для локального запуска и отладки публичной спецификации API %product% вам может понадобиться Docker
-
-<procedure>
-    <step>Зайдите на <a href="https://docs.docker.com/get-started/get-docker/">официальный сайт docker</a> и установите последнюю версию для вашей ОС</step>
-</procedure>
-
-## Настройка переменных среды
-
-Для локального запуска и отладки публичной спецификации API %product% вам также необходимо настроить переменные среды,
-для этого:
-
-<procedure title="Установка переменных среды" id="env_setup">
-    <step>
-        Перечень всех переменных сред используемых во внешней спецификации проекта %product%
-        <table>
-            <tr>
-                <td>Переменная</td>
-                <td>Значение</td>
-            </tr>
-            <tr>
-                <td>SWAGGER_PORT</td>
-                <td>Порт для swagger ui по умолчанию - 9096</td>
-            </tr>
-        </table>
-    </step>
-    <step>
-        Установка обязательных параметров
-        <tabs>
-            <tab title="%windows%">
-                <tip>Для установки переменных среды перманентно можете изучить данную <a href="windows-env.md">статью</a>, либо изучить <a href="https://superuser.com/a/1529193">данное обсуждение</a></tip>
-                <p>Для установки переменных среды на ОС %windows%</p>
-                <code-block lang="powershell">
-                    set "SWAGGER_PORT=9096"
-                </code-block>
-            </tab>
-            <tab title="%unix%">
-                <tip>Для установки переменных среды перманентно можете изучить данную <a href="unix-env.md">статью</a></tip>
-                <p>Для установки переменных среды на ОС %unix%</p>
-                <code-block lang="bash">
-                    export SWAGGER_PORT=9096
-                </code-block>
-            </tab>
-        </tabs>
-    </step>
-</procedure>
-
 ## Локальный запуск спецификации
-
 <tabs>
+   <tab title="Браузер">
+        Для запуска в браузере вам необходимо открыть репозиторий, открыть файл pages/index.html в браузере.
+        <img src="swagger-ui-result.png" alt="Результат открытия документации в браузере"/>
+    </tab>
+   <tab title="Докер-контейнер">
+        <tabs>
     <tab title="%windows%">
         <p>Для локального запуска на ОС %windows%</p>
         <p>Вам также понадобится дополнительно ПО в виде make, установить её на компьютер с ОС %windows% можно с помощью <a href="https://www.cygwin.com/install.html">CYGWIN</a>.</p>
@@ -122,5 +81,8 @@
         <code-block lang="bash">
             make run-swagger
         </code-block>
+    </tab>
+</tabs>
+    <img src="swagger-ui-result.png" alt="Результат открытия документации в браузере"/>
     </tab>
 </tabs>
