@@ -2,6 +2,8 @@
 <!DOCTYPE vars SYSTEM "https://resources.jetbrains.com/writerside/1.0/vars.dtd">
 <vars>
     <var name="product" value="Autobase"/>
+    <var name="autobase-api-version" value="1.30.28" />
+    <var name="spec-version" value="1.0.4"/>
     <var name="title" value="Autobase Specs"/>
     <var name="windows" value="Windows"/>
     <var name="unix" value="Linux/MacOS"/>
