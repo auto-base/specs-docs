@@ -47,7 +47,7 @@
 | number            | string          | Номер дела                                    |
 | created_at        | string/datetime | Дата создания дела                            |
 | updated_at        | string/datetime | Дата обновления дела                          |
-| extended_card     | object          | <a href="#updated-extended-card">см. ниже</a> |
+| extended_card     | map[string]any  | <a href="#updated-extended-card">см. ниже</a> |
 | state             | string          | Состояние дела                                |
 | phase             | string          | Фаза состояния дела                           |
 | type              | string          | Тип дела (КАСКО / ОСАГО)                      |
@@ -63,6 +63,7 @@
 <p id="updated-extended-card" class="note">
 Изменённое содержание вложенного поля `extended_card`:
 </p>
+На данный момент поле extended_card будет пустым, однако в будущем это может измениться, добавление новых полей в extended_card является не конфликтующим изменением API.
 
 | Название поля | Тип    | Описание      | 
 |---------------|--------|---------------|
