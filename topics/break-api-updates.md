@@ -41,33 +41,50 @@
 
 Поля, которые будут выводиться в ответе нового эндпоинта:
 
-| Название поля     | Тип             | Описание                                      |
-|-------------------|-----------------|-----------------------------------------------|
-| uid               | string          | Уникальный идентификатор дела                 |
-| number            | string          | Номер дела                                    |
-| created_at        | string/datetime | Дата создания дела                            |
-| updated_at        | string/datetime | Дата обновления дела                          |
-| extended_card     | map[string]any  | <a href="#updated-extended-card">см. ниже</a> |
-| state             | string          | Состояние дела                                |
-| phase             | string          | Фаза состояния дела                           |
-| type              | string          | Тип дела (КАСКО / ОСАГО)                      |
-| vehicle_id_type   | string          | Тип идентификатора ТС                         |
-| vehicle_id        | string          | Идентификатор ТС                              |
-| grz               | string          | Государственный регистрационный знак          | 
-| recipient_company | string          | Компания получатель                           |
-| wearout_original  | float           | Износ в деле по умолчанию                     |
-| vehicle_age       | float           | Возраст автомобиля                            |
-| customer_uid      | string          | Идентификатор заказчика                       |
-| last_calc_info    | string          | Информация о последней калькуляции            |
+| Название поля     | Тип             | Описание                             |
+|-------------------|-----------------|--------------------------------------|
+| uid               | string          | Уникальный идентификатор дела        |
+| number            | string          | Номер дела                           |
+| created_at        | string/datetime | Дата создания дела                   |
+| updated_at        | string/datetime | Дата обновления дела                 |
+| state             | string          | Состояние дела                       |
+| phase             | string          | Фаза состояния дела                  |
+| type              | string          | Тип дела (КАСКО / ОСАГО)             |
+| grz               | string          | Государственный регистрационный знак | 
+| recipient_company | string          | Компания получатель                  |
+| wearout           | float           | Износ в деле                         |
+| vehicle_age       | float           | Возраст автомобиля                   |
+| customer_uid      | string          | Идентификатор заказчика              |
+| last_calc_info    | string          | Информация о последней калькуляции   |
+| vehicle           | object          | <a href="#vehicle">см. ниже</a>      |
+| documents         | object          | <a href="#documents">см. ниже</a>    |
 
-<p id="updated-extended-card" class="note">
-Изменённое содержание вложенного поля `extended_card`:
+<p id="vehicle" class="note">
+Содержание вложенного поля `vehicle`:
 </p>
-На данный момент поле extended_card будет пустым, однако в будущем это может измениться, добавление новых полей в extended_card является не конфликтующим изменением API.
 
-| Название поля | Тип    | Описание      | 
-|---------------|--------|---------------|
-| Без изменений | string | без изменений |
+| Название поля | Тип    | Описание                             | 
+|---------------|--------|--------------------------------------|
+| manufacturer  | string | Название производителя ТС            |
+| family        | string | Название семейства ТС                |
+| model         | string | Название модели ТС                   |
+| modification  | string | Название модификации ТС              |
+| issue_year    | int    | Год выпуска ТС                       |
+| millage       | float  | Пробег                               |
+| vin           | string | Идентификационный номер ТС           |
+| body          | string | Номер кузова ТС /                    |
+| chassis       | string | Номер шасси ТС                       |
+| engine_number | string | Номер двигателя                      |
+| license_plate | string | Государственный регистрационный знак |
+
+<p id="documents" class="note">
+Содержание вложенного поля `documents`:
+</p>
+
+| Название поля | Тип    | Описание                       | 
+|---------------|--------|--------------------------------|
+| sts           | string | Свидетельство о регистрации ТС |
+| pts           | string | Паспорт транспортного средства |
 
 ## Подробные изменения в эндпоинте /export/case/&#123;case_uid&#125;/available-calcs
 
